@@ -1,6 +1,7 @@
 package com.uti.lockpocket_pm
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
@@ -18,6 +19,10 @@ class utama : AppCompatActivity() {
         setContentView(R.layout.activity_utama)
 
         profilButton = findViewById(R.id.lingkar)
+        profilButton.setOnClickListener {
+            val intent = Intent(this, Profil::class.java)
+            startActivity(intent)
+        }
         loadFotoProfil()
     }
 
