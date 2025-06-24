@@ -102,5 +102,12 @@
                 android:text="Perempuan"
                 android:layout_marginStart="24dp" />
         </RadioGroup>
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#034479"
+            android:text="Simpan"
+            android:layout_marginTop="24dp" />
     </LinearLayout>
 </ScrollView>
