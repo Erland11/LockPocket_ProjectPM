@@ -1,6 +1,7 @@
 package com.uti.lockpocket_pm
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
@@ -45,6 +46,10 @@ class login2Activity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Username atau Password salah", Toast.LENGTH_SHORT).show()
             }
+        }
+        signUpText.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
         }
 
     }
