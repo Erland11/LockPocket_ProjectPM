@@ -83,6 +83,7 @@
             android:focusable="false"
             android:hint="Tanggal Lahir"
             android:minHeight="48dp" />
+
         <RadioGroup
             android:id="@+id/radioGroupGender"
             android:layout_width="match_parent"
@@ -95,6 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Laki-laki" />
+
             <RadioButton
                 android:id="@+id/radioPerempuan"
                 android:layout_width="wrap_content"
@@ -102,6 +104,7 @@
                 android:text="Perempuan"
                 android:layout_marginStart="24dp" />
         </RadioGroup>
+
         <Button
             android:id="@+id/btnSimpan"
             android:layout_width="match_parent"
@@ -117,5 +120,6 @@
             android:backgroundTint="#B70505"
             android:textColor="#FFFFFF"
             android:layout_marginTop="12dp" />
+
     </LinearLayout>
 </ScrollView>
