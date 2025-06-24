@@ -42,6 +42,7 @@ class login2Activity : AppCompatActivity() {
             if (username == savedUsername && password == savedPassword) {
                 sharedPreferences.edit().putBoolean("isLoggedIn", true).apply()
                 Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, utama::class.java))
                 finish()
             } else {
                 Toast.makeText(this, "Username atau Password salah", Toast.LENGTH_SHORT).show()
