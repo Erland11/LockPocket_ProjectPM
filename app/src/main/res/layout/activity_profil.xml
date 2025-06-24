@@ -83,5 +83,19 @@
             android:focusable="false"
             android:hint="Tanggal Lahir"
             android:minHeight="48dp" />
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/radioLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki-laki" />
+
+        </RadioGroup>
     </LinearLayout>
 </ScrollView>
