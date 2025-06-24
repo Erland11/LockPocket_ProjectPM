@@ -5,6 +5,11 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:background="@drawable/bg">
-
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="Kembali" />
 
 </LinearLayout>
