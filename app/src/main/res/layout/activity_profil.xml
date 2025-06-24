@@ -37,5 +37,14 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profil"
+            app:shapeAppearanceOverlay="@style/CircleImageView" />
+
     </LinearLayout>
 </ScrollView>
