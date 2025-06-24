@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
 
         Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, login2Activity::class.java)
             val options = ActivityOptions.makeCustomAnimation(
                 this,
                 android.R.anim.slide_in_left,
