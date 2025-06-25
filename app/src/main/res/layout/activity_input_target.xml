@@ -27,5 +27,16 @@
             android:textColor="#FFFFFF" />
     </LinearLayout>
 
+    <EditText
+        android:id="@+id/etTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Masukkan Target Tabungan"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#CCCCCC" />
 
 </LinearLayout>
