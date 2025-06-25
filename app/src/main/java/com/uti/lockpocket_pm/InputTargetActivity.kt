@@ -42,7 +42,7 @@ class InputTargetActivity : AppCompatActivity() {
 
         val btnKembali = findViewById<ImageView>(R.id.btnKembali)
         btnKembali.setOnClickListener {
-            val intent = Intent(this, utama::class.java)
+            val intent = Intent(this, kelola::class.java)
             startActivity(intent)
             finish()
         }
