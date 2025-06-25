@@ -46,7 +46,7 @@
             android:layout_marginBottom="12dp"
             android:backgroundTint="#FFFFFF"
             android:minHeight="48dp" />
-    </LinearLayout>
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -70,7 +70,17 @@
                 android:text="Target Bulan Ini"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
-        </LinearLayout>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 1.000.000"
+                android:textColor="#FFFFFF"/>
+             </LinearLayout>
+            </LinearLayout>
+         </LinearLayout>
+
+
+
     </LinearLayout>
 </ScrollView>
