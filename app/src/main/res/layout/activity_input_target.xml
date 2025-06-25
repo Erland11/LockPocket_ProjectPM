@@ -38,5 +38,13 @@
         android:minHeight="48dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#CCCCCC" />
+    <Button
+        android:id="@+id/btnSimpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan Target"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
 
 </LinearLayout>
