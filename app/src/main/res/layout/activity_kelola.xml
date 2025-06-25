@@ -137,5 +137,12 @@
             android:textStyle="bold"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp" />
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Semua Target"
+            android:backgroundTint="#B71C1C"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 </ScrollView>
