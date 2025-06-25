@@ -1,5 +1,6 @@
 package com.uti.lockpocket_pm
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -108,9 +109,12 @@ class tabunganku : AppCompatActivity() {
     }
 
     private fun loadDataTransaksi(bulan: String) {
-        pemasukan = 0
-        pengeluaran = 0
+        val db = DatabaseTabungan(this)
+        val transaksi = db.getTransaksiByBulan(bulan)
 
+        for (t in transaksi) {
+            android.util.Log.d("DEBUG_TRANSAKSI", "tipe=${t.tipe} | jumlah=${t.jumlah}")
+        }
     }
 
     private fun updateUI() {
