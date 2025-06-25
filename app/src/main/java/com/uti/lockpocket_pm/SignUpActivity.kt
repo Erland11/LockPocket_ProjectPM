@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -13,6 +14,13 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+
+        val btnKembali = findViewById<ImageView>(R.id.btnKembali)
+        btnKembali.setOnClickListener {
+            val intent = Intent(this, login2Activity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val edtUsername = findViewById<EditText>(R.id.edtNewUsername)
         val edtPassword = findViewById<EditText>(R.id.edtNewPassword)
