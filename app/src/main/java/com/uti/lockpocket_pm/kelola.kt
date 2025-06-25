@@ -31,6 +31,21 @@ class kelola : AppCompatActivity() {
         }
 
         val btnResetTarget = findViewById<Button>(R.id.btnReset)
+        btnResetTarget.setOnClickListener {
 
+            AlertDialog.Builder(this)
+                .setTitle("Reset Semua Data")
+                .setMessage("Apakah kamu yakin ingin menghapus semua target tabungan dan riwayat transaksi?")
+                .setPositiveButton("Ya") { _, _ ->
+
+                    val prefs = getSharedPreferences("TargetTabungan", Context.MODE_PRIVATE)
+                    prefs.edit().clear().apply()
+
+                    Toast.makeText(this, "Semua target dan riwayat berhasil direset", Toast.LENGTH_SHORT).show()
+                }
+                .setNegativeButton("Batal", null) // Jika batal, tidak terjadi apa-apa
+                .show()
+        }
     }
 }
+
