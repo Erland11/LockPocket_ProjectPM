@@ -57,6 +57,9 @@ class DatabaseTabungan(context: Context) :
             put(COLUMN_TANGGAL, tanggal)
         }
         val result = db.insert(TABLE_NAME, null, values)
+
+        Log.d("DatabaseTabungan", "INSERT -> bulan=$bulan | jumlah=$jumlah | keterangan=$keterangan | tipe=$tipe | tanggal=$tanggal | result=$result")
+
         db.close()
         return result != -1L
     }
@@ -64,6 +67,8 @@ class DatabaseTabungan(context: Context) :
     fun getTransaksiByBulan(bulan: String): List<TransaksiModel> {
         val transaksiList = mutableListOf<TransaksiModel>()
         val db = readableDatabase
+
+        Log.d("DatabaseTabungan", "SELECT -> Ambil transaksi bulan: $bulan")
 
         val cursor = db.query(
             TABLE_NAME,
@@ -111,6 +116,24 @@ class DatabaseTabungan(context: Context) :
     fun hapusSemuaTransaksi() {
         val db = writableDatabase
         db.delete(TABLE_NAME, null, null)
+        db.close()
+    }
+
+    fun logSemuaData() {
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
+        if (cursor.moveToFirst()) {
+            do {
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
+                val bulan = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_BULAN))
+                val tipe = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TIPE))
+                val jumlah = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_JUMLAH))
+                val tanggal = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TANGGAL))
+                val ket = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_KETERANGAN))
+                Log.d("DATA_SEMUA", "id=$id | bulan=$bulan | tipe=$tipe | jumlah=$jumlah | tanggal=$tanggal | ket=$ket")
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
         db.close()
     }
 }
