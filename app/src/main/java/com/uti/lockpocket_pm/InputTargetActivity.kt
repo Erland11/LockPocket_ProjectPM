@@ -2,6 +2,7 @@ package com.uti.lockpocket_pm
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,13 +10,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import java.util.Calendar
 
 class InputTargetActivity : AppCompatActivity() {
 
-    private lateinit var sharedPref: android.content.SharedPreferences
+    private lateinit var sharedPref: SharedPreferences
     private lateinit var bulan: String
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +26,7 @@ class InputTargetActivity : AppCompatActivity() {
         val tvBulan = findViewById<TextView>(R.id.tvBulan)
         val etTarget = findViewById<EditText>(R.id.etTarget)
         val btnSimpan = findViewById<Button>(R.id.btnSimpan)
-        val btnKembali = findViewById<ImageView>(R.id.btnKembali)
+        val rvRiwayat = findViewById<RecyclerView>(R.id.rvRiwayat)
 
         val bulanDariIntent = intent.getStringExtra("bulan") ?: "Januari"
         val tahun = Calendar.getInstance().get(Calendar.YEAR)
@@ -38,8 +40,10 @@ class InputTargetActivity : AppCompatActivity() {
             etTarget.setText(savedTarget.toString())
         }
 
+        val btnKembali = findViewById<ImageView>(R.id.btnKembali)
         btnKembali.setOnClickListener {
-            startActivity(Intent(this, kelola::class.java))
+            val intent = Intent(this, utama::class.java)
+            startActivity(intent)
             finish()
         }
 
@@ -54,5 +58,9 @@ class InputTargetActivity : AppCompatActivity() {
                 Toast.makeText(this, "Mohon masukkan nominal", Toast.LENGTH_SHORT).show()
             }
         }
+
+        val db = DatabaseTabungan(this)
+        val transaksiList = db.getTransaksiByBulan(bulan)
+        rvRiwayat.layoutManager = LinearLayoutManager(this)
     }
 }
