@@ -51,6 +51,13 @@
             android:layout_height="32dp"
             android:src="@drawable/ic_lightbulb"
             android:layout_marginEnd="12dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tetapkan Tujuan Keuangan\nTentukan apa yang ingin kamu capai — apakah menabung untuk liburan, dana darurat, atau keperluan lain."
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
     </LinearLayout>
 
     </LinearLayout>
