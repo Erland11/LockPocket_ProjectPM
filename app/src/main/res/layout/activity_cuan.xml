@@ -99,5 +99,18 @@
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_money"
+            android:layout_marginEnd="12dp" />
+    </LinearLayout>
     </LinearLayout>
 </ScrollView>
