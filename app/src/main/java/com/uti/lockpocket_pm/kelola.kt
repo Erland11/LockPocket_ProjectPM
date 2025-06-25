@@ -30,5 +30,7 @@ class kelola : AppCompatActivity() {
             finish()
         }
 
+        val btnResetTarget = findViewById<Button>(R.id.btnReset)
+
     }
 }
