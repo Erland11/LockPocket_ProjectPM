@@ -22,6 +22,14 @@ class kelola : AppCompatActivity() {
             insets
         }
 
+        val btnKembali = findViewById<ImageView>(R.id.btnKembali)
+        btnKembali.setOnClickListener {
+            val intent = Intent(this, utama::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
+            finish()
+        }
+
         val bulanButtons = mapOf(
             R.id.jan to "Januari",
             R.id.feb to "Februari",
