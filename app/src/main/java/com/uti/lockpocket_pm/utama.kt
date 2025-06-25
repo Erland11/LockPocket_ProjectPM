@@ -1,14 +1,13 @@
 package com.uti.lockpocket_pm
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
-import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.imageview.ShapeableImageView
 import java.io.File
+import androidx.core.net.toUri
 
 class utama : AppCompatActivity() {
 
@@ -19,10 +18,16 @@ class utama : AppCompatActivity() {
         setContentView(R.layout.activity_utama)
 
         profilButton = findViewById(R.id.lingkar)
+
         profilButton.setOnClickListener {
             val intent = Intent(this, Profil::class.java)
             startActivity(intent)
         }
+
+        findViewById<ImageView>(R.id.tabungan).setOnClickListener {
+            startActivity(Intent(this, tabunganku::class.java))
+        }
+
         loadFotoProfil()
     }
 
@@ -32,7 +37,7 @@ class utama : AppCompatActivity() {
     }
 
     private fun loadFotoProfil() {
-        val prefs = getSharedPreferences("ProfilPrefs", Context.MODE_PRIVATE)
+        val prefs = getSharedPreferences("ProfilPrefs", MODE_PRIVATE)
         val fotoPath = prefs.getString("foto_profil", null)
 
         if (!fotoPath.isNullOrEmpty()) {
@@ -41,8 +46,9 @@ class utama : AppCompatActivity() {
                 val bitmap = BitmapFactory.decodeFile(file.absolutePath)
                 profilButton.setImageBitmap(bitmap)
             } else {
+
                 try {
-                    val uri = Uri.parse(fotoPath)
+                    val uri = fotoPath.toUri()
                     profilButton.setImageURI(uri)
                 } catch (e: Exception) {
                     e.printStackTrace()
