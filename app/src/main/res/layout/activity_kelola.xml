@@ -40,6 +40,14 @@
             android:backgroundTint="#034479"
             android:textColor="#FFFFFF"
             android:layout_marginBottom="8dp" />
+        <Button
+            android:id="@+id/feb"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Februari"
+            android:backgroundTint="#034479"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
 
     </LinearLayout>
 </ScrollView>
