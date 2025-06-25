@@ -111,6 +111,13 @@
             android:layout_height="32dp"
             android:src="@drawable/ic_money"
             android:layout_marginEnd="12dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Terapkan Prinsip 50/30/20\n• 50% kebutuhan pokok\n• 30% tabungan &amp; investasi\n• 20% hiburan &amp; lainnya"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
     </LinearLayout>
     </LinearLayout>
 </ScrollView>
