@@ -54,6 +54,9 @@ class kelola : AppCompatActivity() {
                     val prefs = getSharedPreferences("TargetTabungan", Context.MODE_PRIVATE)
                     prefs.edit().clear().apply()
 
+                    val db = DatabaseTabungan(this)
+                    db.hapusSemuaTransaksi()
+
                     Toast.makeText(this, "Semua target dan riwayat berhasil direset", Toast.LENGTH_SHORT).show()
                 }
                 .setNegativeButton("Batal", null)
