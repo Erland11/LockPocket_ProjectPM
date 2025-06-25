@@ -25,6 +25,21 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:layout_marginBottom="24dp" />
+    <LinearLayout
+        android:background="@drawable/bg_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Bulan:"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
