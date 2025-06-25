@@ -91,6 +91,13 @@
             android:layout_height="32dp"
             android:src="@drawable/ic_calendar"
             android:layout_marginEnd="12dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Buat Anggaran Bulanan\nMengatur anggaran bulanan membantumu mengelola uang dengan lebih baik."
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
     </LinearLayout>
     </LinearLayout>
 </ScrollView>
