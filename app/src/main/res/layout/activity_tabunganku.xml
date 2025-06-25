@@ -38,7 +38,13 @@
             android:text="Pilih Bulan:"
             android:textColor="#FFFFFF"
             android:layout_marginBottom="8dp" />
-
+        <Spinner
+            android:id="@+id/spinnerBulan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#FFFFFF"
+            android:minHeight="48dp" />
         </LinearLayout>
 
     </LinearLayout>
