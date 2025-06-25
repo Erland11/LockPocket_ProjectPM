@@ -33,6 +33,9 @@ class utama : AppCompatActivity() {
             startActivity(Intent(this, tabunganku::class.java))
         }
 
+        findViewById<ImageView>(R.id.TipsCuan).setOnClickListener {
+            startActivity(Intent(this, cuan::class.java))
+        }
         loadFotoProfil()
     }
 
