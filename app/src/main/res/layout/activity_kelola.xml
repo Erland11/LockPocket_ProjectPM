@@ -88,5 +88,13 @@
             android:backgroundTint="#034479"
             android:textColor="#FFFFFF"
             android:layout_marginBottom="8dp" />
+        <Button
+            android:id="@+id/agus"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Agustus"
+            android:backgroundTint="#034479"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
     </LinearLayout>
 </ScrollView>
