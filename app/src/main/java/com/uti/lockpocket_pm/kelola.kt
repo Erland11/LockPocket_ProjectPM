@@ -30,6 +30,21 @@ class kelola : AppCompatActivity() {
             finish()
         }
 
+        val bulanButtons = mapOf(
+            R.id.jan to "Januari",
+            R.id.feb to "Februari",
+            R.id.mar to "Maret",
+            R.id.apr to "April",
+            R.id.mei to "Mei",
+            R.id.juni to "Juni",
+            R.id.juli to "Juli",
+            R.id.agus to "Agustus",
+            R.id.sep to "September",
+            R.id.okto to "Oktober",
+            R.id.nov to "November",
+            R.id.des to "Desember"
+        )
+
         val btnResetTarget = findViewById<Button>(R.id.btnReset)
         btnResetTarget.setOnClickListener {
 
@@ -43,7 +58,7 @@ class kelola : AppCompatActivity() {
 
                     Toast.makeText(this, "Semua target dan riwayat berhasil direset", Toast.LENGTH_SHORT).show()
                 }
-                .setNegativeButton("Batal", null) // Jika batal, tidak terjadi apa-apa
+                .setNegativeButton("Batal", null)
                 .show()
         }
     }
