@@ -47,6 +47,12 @@
             android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#CCCCCC" />
+        <TextView
+            android:text="Jumlah Ambil"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
     </LinearLayout>
 
 
