@@ -16,18 +16,10 @@ class kelola : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kelola)
 
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-        val btnKembali = findViewById<ImageView>(R.id.btnKembali)
-        btnKembali.setOnClickListener {
-            val intent = Intent(this, utama::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-            startActivity(intent)
-            finish()
         }
 
         val bulanButtons = mapOf(
@@ -45,14 +37,20 @@ class kelola : AppCompatActivity() {
             R.id.des to "Desember"
         )
 
+        for ((id, bulan) in bulanButtons) {
+            findViewById<Button>(id).setOnClickListener {
+                val intent = Intent(this, InputTargetActivity::class.java)
+                intent.putExtra("bulan", bulan)
+                startActivity(intent)
+            }
+        }
+
         val btnResetTarget = findViewById<Button>(R.id.btnReset)
         btnResetTarget.setOnClickListener {
-
             AlertDialog.Builder(this)
                 .setTitle("Reset Semua Data")
                 .setMessage("Apakah kamu yakin ingin menghapus semua target tabungan dan riwayat transaksi?")
                 .setPositiveButton("Ya") { _, _ ->
-
                     val prefs = getSharedPreferences("TargetTabungan", Context.MODE_PRIVATE)
                     prefs.edit().clear().apply()
 
@@ -61,6 +59,6 @@ class kelola : AppCompatActivity() {
                 .setNegativeButton("Batal", null)
                 .show()
         }
+
     }
 }
-
