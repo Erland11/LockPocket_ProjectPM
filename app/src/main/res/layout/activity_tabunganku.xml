@@ -135,6 +135,12 @@
                     android:layout_height="wrap_content"
                     android:text="Total Pemasukan: Rp 0"
                     android:textColor="#FFFFFF"/>
+                <TextView
+                    android:id="@+id/tvPengeluaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Pengeluaran: Rp 0"
+                    android:textColor="#FFFFFF"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
