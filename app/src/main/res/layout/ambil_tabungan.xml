@@ -76,7 +76,14 @@
             android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#CCCCCC" />
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:backgroundTint="#034479"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp" />
     </LinearLayout>
-
 
 </ScrollView>
