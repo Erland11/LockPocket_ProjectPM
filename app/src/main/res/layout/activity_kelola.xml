@@ -120,5 +120,13 @@
             android:backgroundTint="#034479"
             android:textColor="#FFFFFF"
             android:layout_marginBottom="8dp" />
+        <Button
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Desember"
+            android:backgroundTint="#034479"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
     </LinearLayout>
 </ScrollView>
