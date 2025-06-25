@@ -32,6 +32,14 @@
             android:textColor="#FFFFFF"
             android:textSize="29sp"
             android:textStyle="bold|italic" />
+        <Button
+            android:id="@+id/jan"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Januari"
+            android:backgroundTint="#034479"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
 
     </LinearLayout>
 </ScrollView>
