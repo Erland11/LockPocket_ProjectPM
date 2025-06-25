@@ -28,6 +28,10 @@ class utama : AppCompatActivity() {
             startActivity(Intent(this, tabunganku::class.java))
         }
 
+        findViewById<ImageView>(R.id.klla).setOnClickListener {
+            startActivity(Intent(this, kelola::class.java))
+        }
+
         loadFotoProfil()
     }
 
