@@ -75,7 +75,7 @@ class tabunganku : AppCompatActivity() {
                 val tahun = Calendar.getInstance().get(Calendar.YEAR)
                 bulanAktif = "${bulanList[position]} $tahun"
 
-                val prefs = getSharedPreferences("BulanDipilih", MODE_PRIVATE)
+                val prefs = getSharedPreferences("BulanDipilih", Context.MODE_PRIVATE)
                 prefs.edit().putString("bulan", bulanAktif).apply()
 
                 refreshData()
@@ -93,6 +93,7 @@ class tabunganku : AppCompatActivity() {
             val intent = Intent(this, ambil_tabungan::class.java)
             startActivity(intent)
         }
+
         val bulanSekarang = Calendar.getInstance().get(Calendar.MONTH)
         spinnerBulan.setSelection(bulanSekarang)
     }
@@ -101,7 +102,7 @@ class tabunganku : AppCompatActivity() {
         super.onResume()
         if (bulanAktif.isNotEmpty()) {
             refreshData()
-
+            DatabaseTabungan(this).logSemuaData()
         }
     }
 
@@ -112,7 +113,7 @@ class tabunganku : AppCompatActivity() {
     }
 
     private fun loadTarget(bulan: String) {
-        val prefs = getSharedPreferences("TargetTabungan", MODE_PRIVATE)
+        val prefs = getSharedPreferences("TargetTabungan", Context.MODE_PRIVATE)
         target = prefs.getInt(bulan, 0)
     }
 
@@ -123,6 +124,9 @@ class tabunganku : AppCompatActivity() {
         for (t in transaksi) {
             android.util.Log.d("DEBUG_TRANSAKSI", "tipe=${t.tipe} | jumlah=${t.jumlah}")
         }
+
+        pemasukan = transaksi.filter { it.tipe.equals("tambah", ignoreCase = true) }.sumOf { it.jumlah }
+        pengeluaran = transaksi.filter { it.tipe.equals("ambil", ignoreCase = true) }.sumOf { it.jumlah }
     }
 
     private fun updateUI() {
