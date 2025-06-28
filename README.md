@@ -22,7 +22,7 @@ Dirancang agar personalize, membantu mahasiswa, pekerja, dan siapa saja agar bis
 
 # Clone repository:
 
-* git clone https://github.com/username/ProjectAkhir-SICDX-2025.git
+* git clone (https://github.com/Erland11/LockPocket_ProjectPM)
 * Buka project di Android Studio.
 * Sinkronisasi Gradle dan Build Project.
 * Jalankan aplikasi di Emulator atau Perangkat Android.
