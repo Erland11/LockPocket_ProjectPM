@@ -27,8 +27,14 @@ Dirancang agar personalize, membantu mahasiswa, pekerja, dan siapa saja agar bis
 * Sinkronisasi Gradle dan Build Project.
 * Jalankan aplikasi di Emulator atau Perangkat Android.
   
-# IKHTIAR
-+ Erland Adhe Sharendra
-+ Ikhwan Sulistiansyah
-+ Reva Ekalia
+# Anggota
+* Erland Adhe Sharendra
+* Ikhwan Sulistiansyah
+* Reva Ekalia
   
+# Dokumentasi Folder
+
+Folder ini digunakan untuk menyimpan file dokumentasi aplikasi **LockPocket** dalam format PDF, seperti :
+* Dokumentasi dan penjelasan tentang aplikasi LockPocket
+* Panduan penggunaan
+* Dokumentasi Proyek dari Erland Adhe Sharendra, Ikhwan Sulistiansyah dan Reva Ekalia.
